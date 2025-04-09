@@ -1,0 +1,115 @@
+html {
+    position: relative;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fefae0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #283618;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+main {
+    flex: 1;
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+/*  */
+.video-player {
+    flex: 2;
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Make the container a positioning context */
+}
+
+.video-player p {
+    position: absolute;
+    inset: 0; /* Shorthand for top: 0; right: 0; bottom: 0; left: 0 */
+    margin: 300px auto; /* Centers the element */
+    width: 100%; /* Define a fixed width */
+    height: 50px; /* Define a fixed height */
+    background-color: rgba(0, 0, 0, 0.7); /* Optional: Add a background for readability */
+    color: white; /* Optional: Make the text stand out */
+    text-align: center; /* Center the text inside the <p> */
+    padding: 10px; /* Optional: Add some padding */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    z-index: 10; /* Ensure it appears above the iframe */
+    font-size: 20px;
+}
+
+
+.playlist {
+    flex: 1;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.playlist-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.playlist-item img {
+    border-radius: 10px;
+    width: 170px;
+}
+
+.playlist-item span {
+    display: block;
+}
+
+
+.playlist-item div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.playlist-item span:nth-of-type(1) {
+    margin-bottom: 7px;
+}
+
+.playlist-item span:nth-of-type(2),
+.playlist-item span:nth-of-type(3) {
+    font-size: 14px;
+}
+
+
+
+.playlist-item:hover {
+    background-color: #f0f0f0;
+}
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #283618;
+    color: white;
+}
+
+.playing-now {
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+@media (max-width: 567px) {
+    main {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
